@@ -1,0 +1,11 @@
+{
+  "name": "mondora-prerender",
+  "version": "1.0.0",
+  "description": "prerender server",
+  "main": "server.js",
+  "author": "Paolo Scanferla <paolo.scanferla@mondora.com>",
+  "license": "MIT",
+  "dependencies": {
+    "prerender": "^4.0.7"
+  }
+}
