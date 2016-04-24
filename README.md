@@ -22,5 +22,19 @@ docker run -d --name frontend \
 
 ## Configuration
 
-None yet. The goal is to add at least a configuration option to cache renderings
-in S3.
+The server can be configured via the following environment variables:
+
+* `ALLOWED_DOMAINS`: a comma-separated list of domains for which you want to
+  allow requests. Requests for other domains will result in a 404. Example:
+  `mysite.com,www.mysite.com`
+
+* `BLACKLISTED_DOMAINS`: a comma-separated list of domains for which you want to
+  disallow requests. Requests for this domains will result in a 404. Example:
+  `yahoo.com,www.google.com`. _Note: this option is moot if `ALLOWED_DOMAINS`
+  is specified_
+
+* `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `S3_BUCKET_NAME`,
+  `S3_PREFIX_KEY`: variables used to configure the
+  [s3HtmlCache](https://git.io/vw0C5) prerender plugin. `AWS_ACCESS_KEY_ID`,
+  `AWS_SECRET_ACCESS_KEY` and `S3_BUCKET_NAME` are required, otherwise the
+  [inMemoryHtmlCache](https://git.io/vw0CN) plugin will be used.
