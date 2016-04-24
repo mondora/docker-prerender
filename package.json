@@ -1,6 +1,6 @@
 {
   "name": "mondora-prerender",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "description": "prerender server",
   "main": "server.js",
   "author": "Paolo Scanferla <paolo.scanferla@mondora.com>",
